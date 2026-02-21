@@ -83,7 +83,7 @@ public class Tugas {
                         // Masukkan angka-angka untuk 1 baris (dengan beberapa kolom)
                         matriks[i][j] = Integer.parseInt(angka[j]); // parseInt = mengubah string angka menjadi integer
                     }
-                    sah = true;
+                    sah = true; // Inputan sah, keluar dari while, masuk ke for, i bertambah
                 }
             }
         }
