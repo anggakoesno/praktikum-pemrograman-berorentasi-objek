@@ -1,11 +1,13 @@
 package Pertemuan3;
 
 public class Pegawai {
+    // Atribut nama, umur, gaji, dan keterangan jumlah pegawai
     private String nama;
     private int umur;
     private double gaji;
     private static int jumlahPegawai = 0;
 
+    // Konstruktur berparameter untuk Class Pegawai
     public Pegawai (String nama, int umur, double gaji) {
         this.nama = nama;
         this.umur = umur;
