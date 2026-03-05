@@ -8,5 +8,8 @@ public class Main {
 
         Student siswa = new Student();
         siswa.introduce();
+
+        siswa.setAge(18);
+        System.out.println("Age: " + siswa.getAge());
     }
 }

@@ -2,6 +2,7 @@ package Pertemuan4;
 
 public class Person {
     protected String address;
+    protected int age;
 
     public void setAddress(String address) {
         this.address = address;
