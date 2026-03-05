@@ -5,5 +5,8 @@ public class Main {
         Person person = new Person();
         person.setAddress("Jogja");
         person.sayAddress();
+
+        Student siswa = new Student();
+        siswa.introduce();
     }
 }
