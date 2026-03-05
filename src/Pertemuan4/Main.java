@@ -11,5 +11,11 @@ public class Main {
 
         siswa.setAge(18);
         System.out.println("Age: " + siswa.getAge());
+
+        Book buku1 = new Book("Judul 1", "Penulis 1");
+        buku1.borrowBook();
+        System.out.println(buku1.isBookBorrowed());
+        buku1.returnBook();
+        System.out.println(buku1.isBookBorrowed());
     }
 }
