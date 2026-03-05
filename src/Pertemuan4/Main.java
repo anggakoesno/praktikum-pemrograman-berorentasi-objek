@@ -1,5 +1,7 @@
 package Pertemuan4;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         Person person = new Person();
@@ -17,5 +19,14 @@ public class Main {
         System.out.println(buku1.isBookBorrowed());
         buku1.returnBook();
         System.out.println(buku1.isBookBorrowed());
+
+        Saving acct1 = new Saving("123", 1000, 3);
+        System.out.println(acct1);
+
+        Checking acct2 = new Checking("456", 2000, 10000);
+        System.out.println(acct2);
+
+        Deposit acct3 = new Deposit("789", 2500, LocalDate.of(2026, 3, 5));
+        System.out.println(acct3);
     }
 }
