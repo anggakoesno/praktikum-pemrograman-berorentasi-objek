@@ -51,19 +51,38 @@ public class Main {
 //        System.out.println(operasional1);
 
         // Latihan 2: Akun Bank
-        AkunBank akun1 = new AkunBank("Akun 1", 100000);
+//        AkunBank akun1 = new AkunBank("Akun 1", 100000);
+//
+//        System.out.println("Pemilik Rekening: " + akun1.getPemilik());
+//        System.out.println("Saldo Awal: Rp" + akun1.getSaldo());
+//
+//        akun1.deposit(50000);
+//        akun1.withdraw(30000);
+//        akun1.withdraw(200000);
+//        akun1.deposit(0);
+//        akun1.withdraw(0);
+//
+//        akun1.setSaldo(-99);
+//
+//        System.out.println("Saldo Akhir: Rp" + akun1.getSaldo());
 
-        System.out.println("Pemilik Rekening: " + akun1.getPemilik());
-        System.out.println("Saldo Awal: Rp" + akun1.getSaldo());
+        // Latihan 3: Game RPG
+        Warrior W1 = new Warrior("Afif");
+        Tank T1 = new Tank("Virza");
+        Archer A1 = new Archer("Valdo");
 
-        akun1.deposit(50000);
-        akun1.withdraw(30000);
-        akun1.withdraw(200000);
-        akun1.deposit(0);
-        akun1.withdraw(0);
+        W1.DisplayInfo();
+        T1.DisplayInfo();
+        A1.DisplayInfo();
 
-        akun1.setSaldo(-99);
+        System.out.println("PHASE 1");
+        W1.Attack(T1);
+        T1.Heal();
+        A1.Attack(W1);
 
-        System.out.println("Saldo Akhir: Rp" + akun1.getSaldo());
+        System.out.println("\nPHASE 2");
+        W1.Berserk();
+        T1.Taunt();
+        A1.doubleShot(W1);
     }
 }
