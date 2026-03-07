@@ -35,5 +35,4 @@ public class Entity {
         System.out.println("==============================\n");
 
     }
-
 }
