@@ -1,6 +1,6 @@
 package Pertemuan5_PBO;
 
-public abstract class Emoney {
+public class Emoney {
     protected String id;
     protected double balance;
     protected String edition;
