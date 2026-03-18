@@ -8,25 +8,27 @@ public class Main {
         System.out.print("Jumlah produk elektronik: ");
         int jumlahProduk = inputan.nextInt();
 
-        String [] nama = new String[jumlahProduk];
-        double [] harga = new double[jumlahProduk];
+        ProdukElektronik[] daftarProduk = new ProdukElektronik[jumlahProduk];
 
         for (int i = 0; i < jumlahProduk; i++) {
             System.out.println("Isi data produk elektronik ke-" + (i+1));
             System.out.print("Nama: ");
             String n = inputan.next();
             System.out.print("Harga: ");
-            double h = inputan.nextInt();
+            double h = inputan.nextDouble();
+            System.out.print("Masa Garansi (bulan): ");
+            int g = inputan.nextInt();
 
-            nama[i] = n;
-            harga[i] = h;
+            daftarProduk[i] = new ProdukElektronik(n, h, g);
         }
 
-        System.out.println("Daftar produk elektronik: ");
-        for (int j = 0; j < jumlahProduk; j++) {
-            System.out.println("Nama Produk: " + (nama[j]));
-            System.out.println("Harga Produk: " + (harga[j]));
+        System.out.println("=== Daftar Produk Elektronik ===");
+        for (int j = 0; j < daftarProduk.length; j++) {
+            System.out.println("Data Produk ke-" + (j+1));
+            System.out.println("Nama: " + daftarProduk[j].getNama());
+            System.out.println("Harga: " + daftarProduk[j].getHarga());
+            System.out.println("Garansi: " + daftarProduk[j].getGaransi());
+            System.out.println("-------------------------");
         }
-
     }
 }
