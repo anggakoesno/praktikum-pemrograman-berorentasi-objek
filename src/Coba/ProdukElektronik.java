@@ -7,4 +7,8 @@ public class ProdukElektronik extends Produk {
         super(nama, harga);
         this.garansi = garansi;
     }
+
+    public int getGaransi() {
+        return garansi;
+    }
 }
