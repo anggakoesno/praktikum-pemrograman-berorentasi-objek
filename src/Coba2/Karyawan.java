@@ -4,7 +4,7 @@ public class Karyawan {
     private String nama;
     private double gajiPokok;
 
-    public static int jumlahKaryawan;
+    private static int jumlahKaryawan;
 
     public Karyawan (String nama, double gajiPokok) {
         this.nama = nama;
@@ -21,7 +21,11 @@ public class Karyawan {
         return gajiPokok;
     }
 
+    public static int getJumlahKaryawan() {
+        return jumlahKaryawan;
+    }
+
     public String tampilkanData() {
-        return "Data Pegawai " + jumlahKaryawan + "Nama: " + nama + "\nGaji Pokok: " + gajiPokok;
+        return "Nama: " + nama + "\nGaji Pokok: " + gajiPokok;
     }
 }
