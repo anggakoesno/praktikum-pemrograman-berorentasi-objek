@@ -27,5 +27,7 @@ public class Main {
             System.out.println("Data karyawan ke-" + (j+1));
             System.out.println(daftarKaryawanTetap[j].tampilkanData());
         }
+
+        System.out.println("Total Karyawan: " + Karyawan.getJumlahKaryawan());
     }
 }
