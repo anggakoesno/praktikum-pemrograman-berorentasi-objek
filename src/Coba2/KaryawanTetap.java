@@ -1,4 +1,5 @@
 package Coba2;
+import java.text.DecimalFormat;
 
 public class KaryawanTetap extends Karyawan {
     private double tunjangan;
@@ -12,12 +13,14 @@ public class KaryawanTetap extends Karyawan {
         return tunjangan;
     }
 
+    DecimalFormat df = new DecimalFormat("0.##");
+
     @Override
     public String tampilkanData() {
         return "Nama: " + getNama() +
                 "\nGaji Pokok: " + getGajiPokok() +
                 "\nTunjangan: " + getTunjangan() +
-                "\nTotal Gaji: " + (getGajiPokok() + getTunjangan()) +
-                "\nStatus: " + StatusKaryawan.aktif;
+                "\nTotal Gaji: " + (df.format(getGajiPokok() + getTunjangan())) +
+                "\nStatus: " + StatusKaryawan.aktif.getStatus();
     }
 }
