@@ -4,8 +4,8 @@ import java.text.DecimalFormat;
 public class KaryawanTetap extends Karyawan {
     private double tunjangan;
 
-    public KaryawanTetap (String nama, double gajiPokok, double tunjangan) {
-        super(nama, gajiPokok);
+    public KaryawanTetap (String nama, double gajiPokok, double tunjangan, StatusKaryawan status) {
+        super(nama, gajiPokok, status);
         this.tunjangan = tunjangan;
     }
 
@@ -21,6 +21,6 @@ public class KaryawanTetap extends Karyawan {
                 "\nGaji Pokok: " + getGajiPokok() +
                 "\nTunjangan: " + getTunjangan() +
                 "\nTotal Gaji: " + (df.format(getGajiPokok() + getTunjangan())) +
-                "\nStatus: " + StatusKaryawan.aktif.getStatus();
+                "\nStatus: " + getStatus().getStatus();
     }
 }
