@@ -19,7 +19,19 @@ public class Main {
             System.out.print("Tunjangan: ");
             double t = inputan.nextDouble();
 
-            daftarKaryawanTetap[i] = new KaryawanTetap(n, gP, t);
+            System.out.println("Pilih Status (1. Aktif |2. Cuti |3. Resign: ");
+            int pilihan = inputan.nextInt();
+            StatusKaryawan statusDipilih;
+
+            if (pilihan == 1) {
+                statusDipilih = StatusKaryawan.aktif;
+            } else if (pilihan == 2) {
+                statusDipilih = StatusKaryawan.cuti;
+            } else {
+                statusDipilih = StatusKaryawan.resign;
+            }
+
+            daftarKaryawanTetap[i] = new KaryawanTetap(n, gP, t, statusDipilih);
         }
 
         System.out.println("=== Daftar Karyawan ===");
